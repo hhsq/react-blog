@@ -1,0 +1,21 @@
+.header-box{
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  color: #909090;
+  z-index: 250;
+}
+.logo{
+  cursor: pointer;
+}
+header{
+  height: 100%;
+}
+
+nav{
+  height: 100%;
+  flex: 1 0 auto;
+}
+.nav-item-a{
+  color: #909090;
+}
