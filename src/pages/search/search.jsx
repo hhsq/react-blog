@@ -7,7 +7,7 @@ export default class search extends Component {
     }
     render() {
         return (
-            <div>123</div>
+            <div className="container">123</div>
         )
     }
 }

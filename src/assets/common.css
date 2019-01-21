@@ -53,3 +53,16 @@
 .fs24{
     font-size: 24px;
 }
+
+::-webkit-scrollbar-track-piece {
+    background-color:#f8f8f8;
+}
+::-webkit-scrollbar {
+    width:9px;
+    height:9px;
+}
+::-webkit-scrollbar-thumb {
+    background-color:#dddddd;
+    border-radius: 15px;
+    min-height:28px;
+}
