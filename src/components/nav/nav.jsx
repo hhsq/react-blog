@@ -8,9 +8,7 @@ import './../../assets/common.css'
 export default class nav extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            arr: []
-        }
+        this.state = {}
     }
     render() {
         return (
@@ -18,7 +16,7 @@ export default class nav extends Component {
                 <nav>
                     <ul className="nav-list">
                         {
-                            this.state.arr.length > 0 && this.state.arr.map((item, key) => {
+                             this.props.navArr.map((item, key) => {
                                 return (
                                     <li className={`nav-item ${this.props.location.pathname === item.path? "active":""}`} key={key}>
                                         <Link to={item.path}>{item.name}</Link>
@@ -30,10 +28,5 @@ export default class nav extends Component {
                 </nav>
             </div>
         )
-    }
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            arr: nextProps.navArr
-        });
     }
 }

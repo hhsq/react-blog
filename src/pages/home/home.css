@@ -1,0 +1,38 @@
+.homeContent{
+    width: 100%;
+}
+.contentItem{
+    box-shadow: 0 0 5px 0 #90909054;
+    margin: 15px 0;
+    padding: 18px;
+    cursor: pointer;
+}
+.article-title{
+    font-size:18px;
+    color: #909090;
+    font-weight: 600;
+    word-break: break-all;
+}
+.article-cont{
+    font-size: 14px;
+    margin: 10px 0;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical
+    /* autoprefixer: off */
+}
+.article-other{
+    font-size: 14px;
+    margin: 10px 0;
+    color: #666;
+}
+.article-other span{
+    display: inline-block;
+}
+.article-other>span:first-child{
+    margin-right: 10px;
+}

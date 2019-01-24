@@ -52,7 +52,7 @@ class Header extends Component {
                                         {
                                             arr.length > 0 && arr.map((item, key) => {
                                                 return (
-                                                    <li className={`nav-item ${this.props.location.pathname === item.path? "active":""}`} key={key}>
+                                                    <li className={`nav-item ${this.props.location.pathname.indexOf(item.path) > -1? "active":""}`} key={key}>
                                                         <Link className={`nav-item-a iconfont ${item.icon}`} to={item.path}> {item.name}</Link>
                                                     </li>
                                                 )

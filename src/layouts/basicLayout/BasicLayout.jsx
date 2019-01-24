@@ -17,7 +17,7 @@ export default class BasicLayout extends Component {
         return (
             <div>
                 <Header/>
-                <Nav isShow={this.state.isShow} navArr={this.state.navArr} {...this.props}/>
+                {this.state.navArr.length > 0 && <Nav isShow={this.state.isShow} navArr={this.state.navArr} {...this.props}/>}
                 {(this.props.match.path === '*' && this.props.match.url !== '/') ?
                     <NotFound {...this.props}/>:<div className="main-container">{this.props.children}</div>
                 }

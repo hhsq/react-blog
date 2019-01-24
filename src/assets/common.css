@@ -9,6 +9,9 @@
     max-width: 960px;
     margin: 0 auto;
 }
+.main-container .container{
+    align-items: flex-start;
+}
 .nav-list{
     display: flex;
     -webkit-box-align: center;
@@ -42,8 +45,8 @@
     color: #007fff;
 }
 .main-container{
-    background-color: #f4f5f5;
     height: calc(100vh - 110px);
+    background-color: #f0f0f00d;
 }
 .top{
     position: fixed;

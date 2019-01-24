@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import HomeContent from './homeContent/homeContent'
 import './../../assets/common.css'
 
 export default class Home extends Component {
@@ -9,7 +10,7 @@ export default class Home extends Component {
     render() {
         return (
             <div className="container">
-
+                <HomeContent/>
             </div>
         );
     }
