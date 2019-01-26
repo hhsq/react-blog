@@ -1,30 +1,20 @@
-import React,{Component} from 'react'
+import React,{Component} from 'react';
+import {withRouter} from "react-router-dom";
 import './../home.css'
+import { connect } from 'react-redux';
 
-export default class HomeContent extends Component{
+class HomeContent extends Component{
     constructor(props) {
         super(props);
         this.state = {};
+        console.log(this.props.blogContent.navArr)
     }
     render() {
-        let arr = [
-            {
-                title: "从标准原理出发理解 JavaScript 数值精度",
-                content: "从标准原理出从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解",
-                time: '2018-05-03:00:00:00',
-                type: 'JavaScript',
-            },{
-                title: "阿萨达是",
-                content: "斯蒂芬是否水电费水电费付付付付付付付付付付付付付付付付付付付付付付付付付付人生态度如同太阳镜",
-                time: '2018-05-03:00:00:00',
-                type: 'JavaScript',
-            }
-        ];
         return(
             <div className="homeContent">
-                {arr.length > 0 && arr.map((item,key) => {
+                {this.props.blogContent.navArr.length > 0 && this.props.blogContent.navArr.map((item,key) => {
                     return(
-                        <div className="contentItem" key={key}>
+                        <div className="contentItem" key={key} onClick={this.seeInfo}>
                             <p className="article-title">{item.title}</p>
                             <p className="article-cont">{item.content}</p>
                             <p className="article-other">
@@ -37,4 +27,11 @@ export default class HomeContent extends Component{
             </div>
         )
     }
+    seeInfo = () => {
+        // this.props.history.push('/path')
+    }
 }
+function mapStateToProps(state) {
+    return state
+}
+export default connect(mapStateToProps)(withRouter(HomeContent));

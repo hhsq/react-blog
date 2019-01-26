@@ -22,7 +22,6 @@ const routerConfig = [
             {path: '/home/react', layout: BasicLayout, component :Home, name: 'React'},
         ]
     },
-
     {
         path: '/archive',
         layout: BasicLayout,

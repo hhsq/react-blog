@@ -39,7 +39,7 @@ function setRouterConfig(config) {
 function createdRouter(container,router) {
     const routeChildren = [];
 
-    const renderRoute = (routeContainer,routeItem) => {
+    const renderRoute = (routeContainer,routeItem,key) => {
         let routePath;
         if (!routeItem.path) {
             console.error('route must has `path`');
@@ -50,7 +50,7 @@ function createdRouter(container,router) {
         if (routeItem.layout && routeItem.component) {
             routeChildren.push(
                 <Route
-                    key={routePath}
+                    key={key}
                     exact
                     path={routePath}
                     render={(props) => {
@@ -65,7 +65,7 @@ function createdRouter(container,router) {
         } else if (routeContainer && routeItem.component) {
             routeChildren.push(
                 <Route
-                    key={routePath}
+                    key={key}
                     exact
                     path={routePath}
                     render={(props) => {
@@ -80,7 +80,7 @@ function createdRouter(container,router) {
         } else {
             routeChildren.push(
                 <Route
-                    key={routePath}
+                    key={key}
                     exact
                     path={routePath}
                     component={routeItem.component}
@@ -90,13 +90,13 @@ function createdRouter(container,router) {
 
         // 存在子路由，递归当前路径，并添加到路由中
         if (Array.isArray(routeItem.children)) {
-            routeItem.children.forEach((r) => {
-                renderRoute(routeItem.component, r);
+            routeItem.children.forEach((r,k) => {
+                renderRoute(routeItem.component, r,k);
             });
         }
     };
-    router.forEach((r) => {
-        renderRoute(container,r);
+    router.forEach((r,k) => {
+        renderRoute(container,r,k);
     });
     return <Switch>{routeChildren}</Switch>
 }

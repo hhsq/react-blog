@@ -24,7 +24,7 @@ export default class BasicLayout extends Component {
             </div>
         );
     }
-    componentDidMount() {
+    componentWillMount() {
         window.addEventListener("scroll",this.getScrollHeight);
         routerConfig.forEach(e => {
             if (Array.isArray(e.children) && e.children.length > 0) {
