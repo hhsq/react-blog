@@ -26,7 +26,7 @@ class BasicLayout extends Component {
             </div>
         );
     }
-    componentDidMount() {
+    componentWillMount() {
         window.addEventListener("scroll",this.props.getScrollHeight);
         routerConfig.forEach(e => {
             if (Array.isArray(e.children) && e.children.length > 0) {
@@ -38,6 +38,9 @@ class BasicLayout extends Component {
                 }
             }
         });
+    }
+    componentDidMount() {
+        this.props.getScrollHeight()
     }
     componentWillUnmount(){
         this.setState = (state,callback)=>{
