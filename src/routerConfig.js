@@ -14,7 +14,7 @@ const routerConfig = [
     {
         path: '/home', layout: BasicLayout, component :Home, name: '首页',
         children: [
-            {path: '/home', layout: BasicLayout, component :Home, name: '所有'},
+            {path: '/home/all', layout: BasicLayout, component :Home, name: '所有'},
             {path: '/home/javascript', layout: BasicLayout, component :Home, name: 'JavaScript'},
             {path: '/home/html', layout: BasicLayout, component :Home, name: 'HTML'},
             {path: '/home/css', layout: BasicLayout, component :Home, name: 'CSS'},

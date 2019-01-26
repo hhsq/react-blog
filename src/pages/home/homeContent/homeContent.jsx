@@ -7,7 +7,6 @@ class HomeContent extends Component{
     constructor(props) {
         super(props);
         this.state = {};
-        console.log(this.props.blogContent.navArr)
     }
     render() {
         return(

@@ -4,8 +4,10 @@ import Nav from '../../components/nav';
 import NotFound from '../../components/notFount';
 import './../../assets/common.css'
 import routerConfig from './../../routerConfig'
+import { connect } from 'react-redux';
+import {isShowNav} from './../../store/actions.js'
 
-export default class BasicLayout extends Component {
+class BasicLayout extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,8 +26,8 @@ export default class BasicLayout extends Component {
             </div>
         );
     }
-    componentWillMount() {
-        window.addEventListener("scroll",this.getScrollHeight);
+    componentDidMount() {
+        window.addEventListener("scroll",this.props.getScrollHeight);
         routerConfig.forEach(e => {
             if (Array.isArray(e.children) && e.children.length > 0) {
                 if (this.props.location.pathname.indexOf(e.path) > -1) {
@@ -37,9 +39,20 @@ export default class BasicLayout extends Component {
             }
         });
     }
-    getScrollHeight =() => {
-        this.setState({
-            isShow: window.scrollY > 60?false:true
-        })
+    componentWillUnmount(){
+        this.setState = (state,callback)=>{
+            return;
+        };
     }
 }
+function mapGetState(state) {
+    return state
+}
+function mapDispatchState(dispatch) {
+    return {
+        getScrollHeight () {
+            dispatch(isShowNav(window.scrollY <= 60))
+        },
+    }
+}
+export default connect(mapGetState,mapDispatchState)(BasicLayout)

@@ -12,13 +12,14 @@ class Nav extends Component {
     }
     render() {
         return (
-            <div className={`top-view ${this.props.isShow?"":"top"}`}>
+            <div className={`top-view ${this.props.isShowNav.isShow?"":"top"}`}>
                 <nav>
                     <ul className="nav-list">
                         {
                              this.props.navArr.map((item, key) => {
                                 return (
-                                    <li onClick={this.props.switchType} className={`nav-item ${this.props.location.pathname === item.path? "active":""}`} key={key}>
+                                    <li className={`nav-item ${this.props.location.pathname === item.path? "active":""}
+                                    ${(this.props.location.pathname === '/home' && item.path === '/home/all')? "active":""}`} key={key}>
                                         <Link to={item.path}>{item.name}</Link>
                                     </li>
                                 )
@@ -29,7 +30,7 @@ class Nav extends Component {
             </div>
         )
     }
-    componentWillMount() {
+    componentDidMount() {
         this.props.switchType()
     }
 }
@@ -41,7 +42,7 @@ function mapDispatchToProps(dispatch) {
     return {
         switchType () {
             // 这里可调用接口
-            dispatch(blogContent([
+            let arr = [
                 {
                     title: "从标准原理出发理解 JavaScript 数值精度",
                     content: "从标准原理出从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解发理解从标准原理出发理解从标准原理出发理解从标准原理出发理解",
@@ -52,25 +53,25 @@ function mapDispatchToProps(dispatch) {
                     title: "阿萨达是",
                     content: "斯蒂芬是否水电费水电费付付付付付付付付付付付付付付付付付付付付付付付付付付人生态度如同太阳镜",
                     time: '2018-05-03:00:00:00',
-                    type: 'JavaScript',
+                    type: 'HTML',
                 },
                 {
                     title: "阿萨达是",
                     content: "斯蒂芬是否水电费水电费付付付付付付付付付付付付付付付付付付付付付付付付付付人生态度如同太阳镜",
                     time: '2018-05-03:00:00:00',
-                    type: 'JavaScript',
+                    type: 'CSS',
                 },
                 {
                     title: "阿萨达是",
                     content: "斯蒂芬是否水电费水电费付付付付付付付付付付付付付付付付付付付付付付付付付付人生态度如同太阳镜",
                     time: '2018-05-03:00:00:00',
-                    type: 'JavaScript',
+                    type: 'Vue',
                 },
                 {
                     title: "阿萨达是",
                     content: "斯蒂芬是否水电费水电费付付付付付付付付付付付付付付付付付付付付付付付付付付人生态度如同太阳镜",
                     time: '2018-05-03:00:00:00',
-                    type: 'JavaScript',
+                    type: 'React',
                 },
                 {
                     title: "阿萨达是",
@@ -156,7 +157,17 @@ function mapDispatchToProps(dispatch) {
                     time: '2018-05-03:00:00:00',
                     type: 'JavaScript',
                 }
-            ]))
+            ];
+            let pathname = this.navArr.find(e => {return e.path.indexOf(this.location.pathname) > -1}).name;
+            let newArr = [];
+            if (pathname !== '所有') {
+                newArr = arr.filter(e => {
+                    return e.type === pathname
+                });
+            } else {
+                newArr = arr;
+            }
+            dispatch(blogContent(newArr))
         },
     }
 }
