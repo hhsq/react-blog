@@ -10,19 +10,15 @@ class HomeContent extends Component{
     }
     render() {
         return(
-            <div className="homeContent">
-                {this.props.blogContent.navArr.length > 0 && this.props.blogContent.navArr.map((item,key) => {
-                    return(
-                        <div className="contentItem" key={key} onClick={this.seeInfo}>
-                            <p className="article-title">{item.title}</p>
-                            <p className="article-cont">{item.content}</p>
-                            <p className="article-other">
-                                <span>{item.time}</span>
-                                <span>{item.type}</span>
-                            </p>
-                        </div>
-                    )})
-                }
+            <div>
+                <div className="contentItem" onClick={this.seeInfo}>
+                    <p className="article-title">{this.props.contItem.title}</p>
+                    <p className="article-cont">{this.props.contItem.content}</p>
+                    <p className="article-other">
+                        <span>{this.props.contItem.time}</span>
+                        <span>{this.props.contItem.type}</span>
+                    </p>
+                </div>
             </div>
         )
     }
