@@ -27,11 +27,11 @@ class Header extends Component {
                 name: '关于',
                 icon: 'icon-about',
             },
-            {
-                path: '/events',
-                name: '友情链接',
-                icon: 'icon-icon-',
-            },
+            // {
+            //     path: '/events',
+            //     name: '友情链接',
+            //     icon: 'icon-icon-',
+            // },
             {
                 path: '/search',
                 name: '搜索',

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import HomeContent from './../home/homeContent/homeContent'
 import ArchiveCont from './component/archiveCont'
 import './../../assets/common.css'
 import './../home/home.css'
@@ -11,12 +10,6 @@ export default class archive extends Component {
         this.state = {}
     }
     render() {
-        let item = {
-            title: '啊实打实大是就考虑到',
-            content: 'gernm,nfkjasdakdhasID就爱看大神hi骄傲未见重大无故而安慰',
-            time: '2019-01-11 00:00:00',
-            type: 'JavaScript',
-        };
         let gs = [
             {
                 year: '2019',

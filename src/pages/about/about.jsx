@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom'
 import './../../assets/common.css'
 import './about.css'
 
-export default class about extends Component {
+class about extends Component {
     constructor(props) {
         super(props);
         this.state = {}
@@ -49,53 +50,66 @@ export default class about extends Component {
                             <h2>关于项目</h2>
                             <h4>伴宠</h4>
                             <ul>
-                                <li>项目简介:</li>
-                                <li>项目内容:</li>
-                                <li>开发时间:</li>
-                                <li>技术栈:</li>
+                                <li>项目简介:这是一个寄养宠物的平台</li>
+                                <li>负责内容:用户管理，社区管理与宠物管理</li>
+                                <li>开发时间:2017.08-2017.12</li>
+                                <li>技术栈:基于Vue-cli2.v的Vue2.v全家桶,Axios,element-ui2.v(中途升版)</li>
                             </ul>
 
                             <h4>VPN后台管理系统</h4>
                             <ul>
-                                <li>项目简介:</li>
-                                <li>项目内容:</li>
-                                <li>开发时间:</li>
-                                <li>技术栈:</li>
+                                <li>项目简介:这是一个管理VPN用户以及VPN流量的后台管理系统</li>
+                                <li>负责内容:负责前端所有</li>
+                                <li>开发时间:2018.01-2018.01</li>
+                                <li>技术栈:基于Vue-cli2.v的Vue2.v全家桶,Axios,element-ui2.v,Less</li>
                             </ul>
 
-                            <h4>中疗智用web端</h4>
+                            <h4>中疗智用web端单医院</h4>
                             <ul>
-                                <li>项目简介:</li>
-                                <li>开发时间:</li>
-                                <li>技术栈:</li>
+                                <li>项目简介: 中疗智用医学继续教育平台的电脑端,中疗智用一个专业的医学继续教育和交流综合服务平台</li>
+                                <li>开发时间: 2018.04-2018.06</li>
+                                <li>技术栈: jQuery,bootstrap,Ajax,Echarts</li>
+                                <li>项目链接: <span onClick={this.openLink.bind(this,"http://web.cmnt.cn/index.html")}>点我查看</span></li>
                             </ul>
 
                             <h4>四川省卫生健康委员会继续医学教育管理服务平台</h4>
                             <ul>
-                                <li>项目简介:</li>
-                                <li>开发时间:</li>
-                                <li>技术栈:</li>
+                                <li>项目简介:继续医学教育管理服务平台</li>
+                                <li>负责内容:负责前端所有</li>
+                                <li>开发时间: 2018.04-2018.09(第一版),2018.10-2018.10(第二版),2018.11-2018.12(第三版)</li>
+                                <li>技术栈: 基于Vue-cli2.v的Vue2.v全家桶,Axios,element-ui2.v,Echarts</li>
+                                <li>项目链接:
+                                    <span onClick={this.openLink.bind(this,"http://test.cmnt.cn:9090/#/")}>点我查看(测试版)</span>
+                                    <span onClick={this.openLink.bind(this,"http://deyang.scws.org.cn:9001/")}>点我查看(德阳环境)</span>
+                                </li>
                             </ul>
 
                             <h4>泸州市继续医学教育管理服务平台</h4>
                             <ul>
-                                <li>项目简介:</li>
-                                <li>开发时间:</li>
-                                <li>技术栈:</li>
+                                <li>项目简介: 继续医学教育管理服务平台</li>
+                                <li>负责内容: 问卷调查</li>
+                                <li>开发时间: 2018.11-2018.11</li>
+                                <li>技术栈: jQuery,Bootstrap,jQuery-valid,Ajax,Echarts</li>
+                                <li>项目链接:
+                                    <span onClick={this.openLink.bind(this,"http://test.cmnt.cn:9005/login.html")} title="user:2204,pwd:666666">点我查看(测试版)</span>
+                                </li>
                             </ul>
 
-                            <h4>中疗智用手机APP内置继教管理h5</h4>
+                            <h4>中疗智用手机APP内置继教管理移动端适配</h4>
                             <ul>
-                                <li>项目简介:</li>
-                                <li>开发时间:</li>
-                                <li>技术栈:</li>
+                                <li>项目简介: 中疗智用手机APP继续教育模块</li>
+                                <li>负责内容: 所有前端内容(项目管理及审核,项目计划管理及审核)</li>
+                                <li>开发时间: 2018.12-2018.12</li>
+                                <li>技术栈: 基于Vue-cli3.v的Vue2.v全家桶,Axios,Vant,使用Flex布局方式</li>
+                                <li>项目链接: 中疗智用APP继教管理模块</li>
                             </ul>
 
                             <h4>博客</h4>
                             <ul>
-                                <li>项目简介:</li>
-                                <li>开发时间:</li>
-                                <li>技术栈:</li>
+                                <li>项目简介:一个博客,也是我在网络上的一个小屋，记录着我的编程经验和生活</li>
+                                <li>开发时间:2019.01-2019.01</li>
+                                <li>技术栈: React,Redux</li>
+                                <li>项目链接:暂未上线</li>
                             </ul>
                         </div>
                     </div>
@@ -103,4 +117,9 @@ export default class about extends Component {
             </div>
         )
     }
+    openLink(url) {
+        console.log(url)
+        window.open(url)
+    }
 }
+export default withRouter(about)
