@@ -117,7 +117,7 @@ class about extends Component {
                             <ul className="pro-introduction">
                                 <li><b>项目简介</b>:一个博客,也是我在网络上的一个小屋，记录着我的编程经验和生活</li>
                                 <li><b>开发时间</b>:2019.01-2019.01</li>
-                                <li><b>技术栈</b>: React,Redux</li>
+                                <li><b>技术栈</b>: React,Redux,React-Router</li>
                                 <li><b>项目链接</b>:暂未上线</li>
                             </ul>
                         </div>
