@@ -39,3 +39,14 @@
 .about-content ul{
     padding-left: 36px;
 }
+.link-hover{
+    cursor: pointer;
+}
+.link-hover:hover{
+    color: #171a20;
+    transition: color .3s;
+}
+.pro-introduction{
+    font-size: 14px;
+    line-height: 24px;
+}
