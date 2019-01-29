@@ -4,7 +4,7 @@
 ### 版本更迭
 > 2019/01/29 &nbsp; React-blog1.0正式版本
 
-## <a name="features">&sect; 技术栈</a>
+## <a name="features">技术栈</a>
 > 详情可参阅 `package.json`
 * 基于create-react-app
 * React 16.6.1
@@ -15,7 +15,7 @@
 
 ***
 
-## <a name="getting-started">&sect; 快速开始</a>
+## <a name="getting-started">开始</a>
 在开始前，希望您已通读如下资料
 
 * [React 文档][https://reacttraining.com/react-router/web/guides/quick-start]
@@ -36,7 +36,7 @@
 如需手动配置webpack,可执行命令npm run eject  
 然后耐心等待即可  
 
-## <a name="architecture">&sect; 项目架构</a>
+## <a name="architecture">项目架构</a>
 ### <a name="tree">目录结构</a>
 ```
 .
@@ -69,13 +69,13 @@
 * 优化目录结构，更好的模块分离，组件化
 
 
-## <a name="development">&sect; 测试</a>
+## <a name="development">测试</a>
 参考：
 * Facebook [Jest 测试文档](https://jestjs.io/docs/en/getting-started)
 
 
 
-## <a name="deployment">&sect; 部署</a>
+## <a name="deployment">部署</a>
 在 `react-demo` 的命令窗口下，敲下 `npm run build`，将会在项目根目录下生成 `dist/`
 > 关于生产环境下的部署与优化，请自行查阅相关资料
 
