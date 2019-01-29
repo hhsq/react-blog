@@ -1,10 +1,6 @@
 # React 学习项目 · 简易博客
 
 
-![应用截图](./src/assets/images/home.gif)
-![应用截图](./src/assets/images/about.gif)
-
-
 > ### 版本更迭
 > 2019/01/29 &nbsp; React-blog1.0正式版本
 
@@ -25,19 +21,20 @@
 * [React 文档][https://reacttraining.com/react-router/web/guides/quick-start]
 * [React Router 文档][https://react.docschina.org/]
 
-同时您还需要熟悉 ES6。[ES6][http://es6.ruanyifeng.com/]
+## 同时您还应该熟悉 ES6。[http://es6.ruanyifeng.com/]
+## 或者通读MDN [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript]
 
 ### <a name="install">安装</a>
-在`react-blog` 的命令窗口下，敲下 `npm install`
-直到依赖安装完成
+## 在`react-blog` 的命令窗口下，运行 `npm install`
+## 直到依赖安装完成
 
 ### <a name="start">启动</a>
-在`react-blog` 的命令窗口下，敲下 `npm start`
-浏览器会自动打开 `localhost:3000`，此时即可预览整个项目
+## 在`react-blog` 的命令窗口下，运行 `npm start`
+## 浏览器会自动打开 `localhost:3000`，此时即可预览整个项目
 
 ### <a name="notice">注:</a>
-如需手动配置webpack,可执行命令npm run eject
-然后耐心等待即可
+## 如需手动配置webpack,可执行命令npm run eject
+## 然后耐心等待即可
 
 ## <a name="architecture">&sect; 项目架构</a>
 ### <a name="tree">目录结构</a>
@@ -83,3 +80,6 @@
 > 关于生产环境下的部署与优化，请自行查阅相关资料
 
 ***
+
+![应用截图](./src/assets/images/home.gif)
+![应用截图](./src/assets/images/about.gif)
