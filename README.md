@@ -1,7 +1,7 @@
 # React 学习项目 · 简易博客
 
 
-> ### 版本更迭
+### 版本更迭
 > 2019/01/29 &nbsp; React-blog1.0正式版本
 
 ## <a name="features">&sect; 技术栈</a>
@@ -25,16 +25,16 @@
 或者通读MDN [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript]
 
 ### <a name="install">安装</a>
-在`react-blog` 的命令窗口下，运行 `npm install`
-直到依赖安装完成
+在`react-blog` 的命令窗口下，运行 `npm install`  
+直到依赖安装完成  
 
 ### <a name="start">启动</a>
-在`react-blog` 的命令窗口下，运行 `npm start`
-浏览器会自动打开 `localhost:3000`，此时即可预览整个项目
+在`react-blog` 的命令窗口下，运行 `npm start`  
+浏览器会自动打开 `localhost:3000`，此时即可预览整个项目  
 
 ### <a name="notice">注:</a>
-如需手动配置webpack,可执行命令npm run eject
-然后耐心等待即可
+如需手动配置webpack,可执行命令npm run eject  
+然后耐心等待即可  
 
 ## <a name="architecture">&sect; 项目架构</a>
 ### <a name="tree">目录结构</a>
