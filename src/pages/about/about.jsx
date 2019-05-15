@@ -22,10 +22,10 @@ class about extends Component {
                         <div className="about-content">
                             <h2>我的简历</h2>
                             <p>
-                                我叫黄思权,1997年的老腊肉<br/>
-                                2018年6月毕业于四川工商职业技术学院，软件技术专业<br/>
+                                <br/>
+                                软件技术专业<br/>
                                 从事前端开发近两年时间<br/>
-                                曾就职于成都令鹿科技,四川中疗网络科技有限公司<br/>
+                                <br/>
                             </p>
                             <h4>技术栈</h4>
                             <ul>
