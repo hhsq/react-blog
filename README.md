@@ -1,20 +1,6 @@
 # React 学习项目 · 简易博客
 
 
-### 版本更迭
-> 2019/01/29 &nbsp; React-blog1.0正式版本
-
-## <a name="features">技术栈</a>
-> 详情可参阅 `package.json`
-* 基于create-react-app
-* React 16.6.1
-* Redux
-* React Router4.v
-* 计划fetch
-* ES6
-
-***
-
 ## <a name="getting-started">开始</a>
 在开始前，希望您已通读如下资料
 
@@ -79,7 +65,3 @@
 在 `react-demo` 的命令窗口下，敲下 `npm run build`，将会在项目根目录下生成 `dist/`
 > 关于生产环境下的部署与优化，请自行查阅相关资料
 
-***
-
-![应用截图](./src/assets/images/home.gif)
-![应用截图](./src/assets/images/about.gif)
